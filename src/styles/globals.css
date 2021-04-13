@@ -17,4 +17,8 @@
   .card-section {
     @apply flex flex-col;
   }
+
+  .pagination {
+    @apply bg-green-500 rounded-sm hover:text-black p-2 text-xl sm:text-2xl font-bold dark:text-white disabled:cursor-not-allowed;
+  }
 }

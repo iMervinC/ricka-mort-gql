@@ -7,6 +7,9 @@ module.exports = {
       container: {
         center: true,
       },
+      width: {
+        fit: 'fit-content',
+      },
     },
   },
   variants: {

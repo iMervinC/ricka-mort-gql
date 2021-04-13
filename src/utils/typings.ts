@@ -1,4 +1,5 @@
 export interface Char {
+  id: string
   name: string
   status: string
   species: string
@@ -13,6 +14,11 @@ export interface Char {
 }
 export interface CharData {
   characters: {
+    info: {
+      count: number
+      next: number
+      prev: number
+    }
     results: Char[]
   }
 }
