@@ -1,7 +1,9 @@
 import { FC } from 'react'
 import { Char } from '@/utils/typings'
+import { useRouter } from 'next/router'
 
 const CharCard: FC<Char> = ({
+  id,
   image,
   location,
   name,
@@ -9,9 +11,18 @@ const CharCard: FC<Char> = ({
   species,
   status,
 }) => {
+  const route = useRouter()
+
+  const clickHandler = (_url: string) => {
+    route.push(`/character/${_url}`)
+  }
+
   return (
-    <li className="flex flex-col sm:flex-row sm:space-x-3 border-2 border-black dark:border-white rounded-lg p-2 text-2xl w-80 sm:w-auto mx-auto sm:mx-0">
-      <img className="rounded-lg mx-auto sm:mx-0 h-52" src={image} alt={name} />
+    <li
+      onClick={() => clickHandler(id)}
+      className="flex flex-col sm:space-x-3  w-80 sm:w-auto mx-auto  sm:mx-0 card "
+    >
+      <img className="rounded-lg mx-auto  h-52 w-52" src={image} alt={name} />
       <div className="flex flex-col justify-center">
         <div className="card-section">
           <h2 className="font-bold">{name}</h2>
@@ -23,7 +34,7 @@ const CharCard: FC<Char> = ({
         </div>
         <div className="card-section">
           <span className="text-gray-500 text-xl">Origin</span>
-          <span className="text-xl">{`${origin.name} - ${origin.dimension}`}</span>
+          <span className="text-xl">{origin.name}</span>
         </div>
       </div>
     </li>

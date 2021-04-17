@@ -10,6 +10,10 @@ module.exports = {
       width: {
         fit: 'fit-content',
       },
+      boxShadow: {
+        custom: '-8px 8px 0 0 rgba(4, 120, 87)',
+        active: '-4px 4px 0 0 rgba(4, 120, 87)',
+      },
     },
   },
   variants: {

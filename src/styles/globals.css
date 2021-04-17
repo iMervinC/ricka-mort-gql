@@ -18,7 +18,10 @@
     @apply flex flex-col;
   }
 
+  .card {
+    @apply bg-gray-800 hover:bg-gray-700  rounded-lg p-2 text-2xl cursor-pointer hover:shadow-custom transition-all;
+  }
   .pagination {
-    @apply bg-green-500 rounded-sm hover:text-black p-2 text-xl sm:text-2xl font-bold dark:text-white disabled:cursor-not-allowed;
+    @apply bg-green-500 rounded-sm hover:text-black p-2 text-xl sm:text-2xl font-bold dark:text-white disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:text-white;
   }
 }

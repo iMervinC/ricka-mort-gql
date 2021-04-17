@@ -1,3 +1,5 @@
+import { type } from 'node:os'
+
 export interface Char {
   id: string
   name: string
@@ -21,4 +23,11 @@ export interface CharData {
     }
     results: Char[]
   }
+}
+
+export interface CharInv extends Char {
+  episode: {
+    id: string
+    name: string
+  }[]
 }

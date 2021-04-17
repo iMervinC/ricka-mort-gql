@@ -9,7 +9,7 @@ const PageLayout: FC<{ title: string }> = ({ title, children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="container mt-16">{children}</main>
+      <main className="container mt-16 mb-10 ">{children}</main>
     </>
   )
 }
